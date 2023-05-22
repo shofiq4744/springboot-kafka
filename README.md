@@ -10,10 +10,16 @@ Zookeeper server is listening on the port 2181 to manage our Kafka servers. We d
 With 2 nodes of Kafka servers we will expose the host application with port 29092 & 39092. However our Kafka is actually advertised on the port 9092 configured in the environment
 
 Step 2: Start services 
-nc -z localhost 22181
-nc -z localhost 29092
-nc -z localhost 39092
-nc -z localhost 9000
+i) nc -z localhost 22181
+ii) nc -z localhost 29092
+iii) nc -z localhost 39092
+iv) nc -z localhost 9000
 
 docker-compose logs zookeeper | grep -i started
+
 docker-compose logs kafka-server-1 | grep -i started
+
+Step 3: CMAK is a tool for managing Apache Kafka clusters
+
+Ref: https://haithai91.medium.com/zookeeper-kafka-with-docker-b1d4b33c0d5e
+https://betterprogramming.pub/kafka-with-java-spring-and-docker-asynchronous-communication-between-microservices-e1d00e120831
